@@ -1,0 +1,29 @@
+{
+	"name": "steady-graph",
+	"version": "0.1.0",
+	"description": "Keep force-directed graph layouts from spinning, flipping and jumping between runs. 2D Procrustes alignment plus gentle damping, so a sequence of layouts reads as growth.",
+	"type": "module",
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js"
+		}
+	},
+	"files": ["dist", "README.md", "LICENSE"],
+	"sideEffects": false,
+	"scripts": {
+		"build": "tsc -p .",
+		"test": "npm run build && node --test test/*.test.js",
+		"prepublishOnly": "npm test"
+	},
+	"keywords": ["graph", "force-directed", "layout", "procrustes", "alignment", "animation", "timelapse", "d3-force", "network-visualization"],
+	"author": "Shady Knoll Labs",
+	"license": "MIT",
+	"repository": { "type": "git", "url": "https://github.com/mabbott2011/Steady_Graph.git" },
+	"homepage": "https://shadyknolllabs.com/steady-graph",
+	"devDependencies": {
+		"typescript": "5.9.3"
+	}
+}
